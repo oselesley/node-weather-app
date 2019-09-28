@@ -57,7 +57,7 @@ app.get('/weather', (req, res) => {
       if (error) return res.send({
         error
       })
-      const forecastMsg = `${daily.data[0].summary}. It is currently ${currently.temperature} degrees out. There is ${currently.precipProbability + '%'} chance of rain.\n\nThe Highest temperature today will be ${daily.data[0].temperatureHigh} degrees and the lowest ${daily.data[0].temperatureLow}`
+      const forecastMsg = `${daily.data[0].summary}. It is currently ${currently.temperature} degrees out.\nThe High today will be ${daily.data[0].temperatureHigh} degrees with a low of ${daily.data[0].temperatureLow} degrees.\n\nThere is ${currently.precipProbability + '%'} chance of rain.`
       res.send({
         location: location,
         forecast: forecastMsg,
