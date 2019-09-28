@@ -5,6 +5,7 @@ const geocode = require('../utils/geocode')
 const forecast = require('../utils/forecast')
 
 const app = express()
+const port = process.env.PORT || 3000
 
 // set the publicpath directory and the views directory and also the partials directory for hbs
 const publicPathDirectory = path.join(__dirname, '../public')
@@ -81,6 +82,6 @@ app.get('*', (req, res) => {
     author: 'Leslie Okoduwa'
   })
 })
-app.listen(3000, () => {
-  console.log('Listening...')
+app.listen(port, () => {
+  console.log('Listening at port ' + port + '...')
 })
