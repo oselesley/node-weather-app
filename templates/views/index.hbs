@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="icon" href="./img/weather.png" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="main-content">
+  {{>header}}
+  <p class="opening-text">use this site to get your weather forecast!</p>
+  <form id="search-form">
+    <input type="text" name="" id="search-input" placeholder="Enter location!">
+    <button>Search</button>
+  </form>
+  <p class="location"></p>
+  <p class="forecast"></p>
+  </div>
+  {{>footer}}
+
+  <script src="./js/helpers.js"></script>
+  <script src="./js/scripts.js"></script>
+</body>
+
+</html>
